@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI 與 體脂肪率計算</title> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script>
+   
+        function calculateBMI() {
+         let height = document.getElementById("heightBMI").value / 100;  
+         let weight = document.getElementById("weightBMI").value;  
+         let bmi = weight / (height * height); 
+         document.getElementById("result").innerHTML = "您的 BMI 是: " + bmi.toFixed(2); 
+        }
+
+     
+        function calculateBodyFat() {
+        let height = document.getElementById("heightBF").value / 100;  
+        let weight = document.getElementById("weightBF").value;  
+        let age = document.getElementById("age").value;  
+        let gender = document.querySelector('input[name="gender"]:checked').value;  
+
+            
+        let bmi = weight / (height * height);
+
+           
+        let bodyFat;
+        if (gender === "male") {
+            bodyFat = 1.20 * bmi + 0.23 * age - 16.2;
+        } else {
+            bodyFat = 1.20 * bmi + 0.23 * age - 5.4;
+        }
+
+        document.getElementById("bodyFatResult").innerText = "您的體脂肪率是: " + bodyFat.toFixed(2) + "%"; 
+        }
+    </script>
+    <style>
+        .container {
+            margin-top: 50px;
+        }
+        .highlighted-text {
+         font-size: 4em;
+         font-weight: bold;
+         color: darkgreen; 
+         text-align: center; 
+         padding: 10px;
+         background-color: rgb(183, 248, 226);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container mt-4">
+        <h1 class="highlighted-text">BMI與體脂肪率計算</h1>
+    </div>
+
+    <div class="container">
+        <div class="row align-items-start">
+            <div class="col">
+                <p class="fs-1">BMI計算</p>
+                身高 (cm): <input type="number" id="heightBMI"><br>
+                體重 (kg): <input type="number" id="weightBMI"><br>
+                <button onclick="calculateBMI()">計算 BMI</button>
+                <div id="result"></div>
+            </div>
+
+            <div class="col">
+                <p class="fs-1">體脂肪率計算</p>
+                身高 (cm): <input type="number" id="heightBF"><br>
+                體重 (kg): <input type="number" id="weightBF"><br>
+                年齡: <input type="number" id="age"><br>
+                性別:
+                <label><input type="radio" name="gender" value="male"> 男性</label>
+                <label><input type="radio" name="gender" value="female"> 女性</label><br>
+                <button onclick="calculateBodyFat()">計算體脂肪率</button>
+                <div id="bodyFatResult"></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+
+    <style>
+        
+        .h4 {
+          line-height: 1.8;
+        }
+
+        .h5 {
+          line-height: 3;
+        }
+        .highlighted-text {
+          font-size: 4em;
+          font-weight: bold;
+          color: darkgreen; 
+          text-align: left; 
+          padding: 10px;
+          background-color: rgb(183, 248, 226);
+        }
+
+        .image-row {
+          display: flex; 
+          justify-content: space-between; 
+          align-items: center; 
+          margin: 20px 0; 
+          gap: 20px; 
+          padding-left: 30px; 
+          padding-right: 30px;
+}
+        .BMI {
+          width: 700px;
+          height: auto; 
+          margin: 10px;
+        }
+
+       .體脂 {
+          width: 700px; 
+          height: auto; 
+          margin: 10px; 
+    }
+  
+
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Test</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+      <h1 class="highlighted-text">你知道嗎？！減肥不能只看體重數字！</h1>
+  </div>
+
+  
+    <div class="container mt-4">
+      <p class="h4">想減肥，不能只看<span style="color: red;">體重數字</span>的變化，更要注意<span style="color: red;">BMI</span>及<span style="color: red;">體脂肪率</span>的變化！<br>
+        <strong style="font-size: 1.6em; color: darkred;">什麼是BMI？</strong> 
+        <br>BMI（身體質量指數）：BMI 是一個簡易衡量肥胖程度的工具。由體重（公斤）除以身高的平方（公尺）得出的數值，用來衡量肥胖程度。<br>
+        <strong style="font-size: 1.6em; color: darkred;">什麼是體脂肪率？</strong>
+        <br>體脂肪是指儲存在皮下組織的「皮下脂肪」和體內器官周圍的「內臟脂肪」，分析出人體肌肉及脂肪的比率。我們可以透過BMI及體脂肪率，來制定更有效的健康計劃。<br></p>
+        <p class="h3"><strong style="color: rgb(12, 40, 185);">來測量看看自己的BMI、體脂肪率吧！</strong></p><br>
+        <a href="測量頁面.html" class="btn btn-primary">立即測量</a>
+        <p class="h5"><strong style="color: black;">以下為標準指標圖示：</strong></p> 
+        
+        
+    </div>
+        <div class="image-row">
+    <img src="https://www.health.taichung.gov.tw/media/1001217/%E4%BB%80%E9%BA%BC%E6%98%AFbmi-02_0.jpg?width=500&height=500" 
+    class="BMI" alt=" ">
+    <img src="https://storage.googleapis.com/www-cw-com-tw/ckeditor/202303/ckeditor-640045d57f1b3.jpg" 
+    class="體脂" alt=" ">
+    </div>
+
+
+</body>
+</html>
